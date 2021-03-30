@@ -1,0 +1,31 @@
+#!/usr/local/bin/python3.9
+import random
+print ("Bienvenue au casino !")
+cagnote = int(input("Quelle est votre cagnote ? "))										#choix d'une cagnote
+sortir = "yes"
+while (sortir != "no") and (cagnote > 0):											# boucle while pour arrêter le jeu
+	mise = int(input("Quelle est votre mise ? "))
+	while cagnote < mise:													# boucle while de contrôle si on mise plus que notre cagnotte
+		print ("vous misez plus que votre cagnote !")
+		mise = int(input("Quelle est votre mise ? "))
+	balle = random.randint(0,49)
+	# ~ print (balle)
+	nombre = int(input("Sur quel nombre entre 0 et 49 voulez-vous miser ? "))
+	cagnote = cagnote - mise
+	# ~ print(cagnote)
+	if nombre == balle:													# condition de victoire
+		cagnote = cagnote + (3 * mise) + mise
+		print ("Bravo vous avez trouvé le bon numéro !!!")
+		print ("Votre cagnote est maintenant de ", cagnote)
+		sortir = input ("Voulez-vous continuer ? [yes/no]") 
+	elif ((nombre %2 ==0) and (balle %2 ==0)) or ((nombre %2 ==1) and (balle %2 ==1)):  # respect de la parité
+		cagnote = cagnote + (1.5 * mise)
+		print ("Vous avez trouvé la bonne parité mais le mauvais numéro !")
+		print ("Votre cagnote est maintenant de ", cagnote)
+		sortir = input ("Voulez-vous continuer ? [yes/no]")
+	else:															# défaite
+		print ("vous avez perdu !!!")
+		print ("Votre cagnote est maintenant de ", cagnote)
+		if cagnote == 0:
+			break		
+		sortir = input ("Voulez-vous continuer ? [yes/no]")

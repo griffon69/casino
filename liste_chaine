@@ -1,0 +1,42 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
+import random
+
+tableau_jeu=[]
+
+for i in range (0,10):								# on créé un tableau à 10 entrées
+	tableau_jeu.append (random.randint (1,10))
+
+tableau_jeu.sort()
+
+# ~ print (tableau_jeu)
+
+chiffre = int(input("Choisissez un nombre entre 1 et 10 : "))
+
+for item in tableau_jeu:
+	if item == chiffre:
+		resultat = "gagné"
+		break
+	else:
+		resultat = "perdu"
+print (resultat)import random
+
+tableau_jeu=[]
+
+for i in range (0,10):								# on créé un tableau à 10 entrées
+	tableau_jeu.append (random.randint (1,10))
+
+tableau_jeu.sort()
+
+# ~ print (tableau_jeu)
+
+chiffre = int(input("Choisissez un nombre entre 1 et 10 : "))
+
+for item in tableau_jeu:
+	if item == chiffre:
+		resultat = "gagné"
+		break
+	else:
+		resultat = "perdu"
+print (resultat)

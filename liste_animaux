@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+## -*- coding: UTF-8 -*-
+
+animaux = ["lapin","chat", "chien", "chiot", "dragon", "ornithorynque"]
+
+# ~ animaux.reverse() 			# inverse les éléments de la liste
+
+# ~ animaux.sort()				# trie la liste par ordre alphabétique
+
+animaux.append ("troll") 		# ajoute troll à la liste
+
+animaux_compagnie = ["lapin", "chat", "chien", "chiot"]
+
+for item in animaux_compagnie:	# balaye les élements de la liste animaux de compagnie
+	animaux.remove(item)		# enlève les éléments dans la liste animaux qui correspondent à item de la liste animaux de compagnie
+
+for item in animaux:
+	print (item)animaux = ["lapin","chat", "chien", "chiot", "dragon", "ornithorynque"]
+
+# ~ animaux.reverse() 			# inverse les éléments de la liste
+
+# ~ animaux.sort()				# trie la liste par ordre alphabétique
+
+animaux.append ("troll") 		# ajoute troll à la liste
+
+animaux_compagnie = ["lapin", "chat", "chien", "chiot"]
+
+for item in animaux_compagnie:	# balaye les élements de la liste animaux de compagnie
+	animaux.remove(item)		# enlève les éléments dans la liste animaux qui correspondent à item de la liste animaux de compagnie
+
+for item in animaux:
+	print (item)
